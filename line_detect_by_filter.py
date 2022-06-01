@@ -57,6 +57,10 @@ for i in range(img_num):
         avr_theta = avr_theta / 2
         print(avr_pt)
         print(avr_theta)
+
+        pt1 = (int(avr_pt), 0)
+        pt2 = (int(avr_pt+np.tan(-avr_theta)*height),height)
+        cv2.line(result,pt1,pt2,(0),2)
         if save:
             train_data.append([avr_pt,avr_theta])
             train_name.append(img_name)
@@ -73,8 +77,6 @@ for i in range(img_num):
 
     cv2.imshow('Result', result)
     print(f'{cnt_lines} lines detected')
-    #cv2.imshow('raw', img_raw)        
-    #cv2.imshow('Guassian', img)
     cv2.imshow('Canny', edges)
     if save_video:
         out_canny.write(edges)
