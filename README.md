@@ -7,9 +7,9 @@
 文件结构如下：
 
 ├─line
-		│  └─4
-		├─other_weights
-		└─utils
+│  └─4
+├─other_weights
+└─utils
 
 可以通过[百度网盘](https://pan.baidu.com/s/1f29Vw--blKuaV_zmUPTFrg?pwd=zjur)下载line文件夹，密码zjur
 
